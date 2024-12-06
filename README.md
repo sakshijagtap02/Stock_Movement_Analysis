@@ -47,7 +47,6 @@ The model uses sentiment analysis of discussions on subreddits like `r/stocks` t
     ```
 
 4. Add your Reddit API credentials in the scraping script:
-    - Open `data_scraping.py` or `data_scraping.ipynb`.
     - Replace the placeholder credentials with your own:
       ```python
       reddit = praw.Reddit(
@@ -58,6 +57,26 @@ The model uses sentiment analysis of discussions on subreddits like `r/stocks` t
           password='YOUR_REDDIT_PASSWORD'
       )
       ```
+
+## How to Run
+### 1. Scrape Reddit Data
+1. Navigate to the `notebooks/` folder and open the `stock_movement_analysis.ipynb` file in Jupyter Notebook.
+2. Run all cells to scrape stock-related discussions from `r/stocks` or a chosen subreddit.
+
+### 2. Perform Sentiment Analysis
+1. Run all cells to:
+   - Clean and preprocess the data.
+   - Perform sentiment analysis using NLTK's VADER tool.
+
+### 3. Train and Evaluate the Model
+1. Run all cells to:
+   - Load the preprocessed data.
+   - Train a Random Forest Classifier on features like sentiment polarity and word count.
+   - Evaluate the model using metrics such as accuracy, precision, and recall.
+
+### 4. View Results
+- Check the output of the prediction model.
+- Visualizations such as sentiment distributions and model performance metrics are displayed in the notebook.
 
 ## Results
 - The Random Forest Classifier achieved an accuracy of **85%** on the test dataset.
