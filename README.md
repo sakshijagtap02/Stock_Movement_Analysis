@@ -31,8 +31,8 @@ The model uses sentiment analysis of discussions on subreddits like `r/stocks` t
 ### Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/stock-movement-analysis.git
-    cd stock-movement-analysis
+    git clone https://github.com/your-repo/Stock_Movement_Analysis.git
+    cd Stock_Movement_Analysis
     ```
 
 2. Create and activate a virtual environment (optional but recommended):
@@ -59,31 +59,6 @@ The model uses sentiment analysis of discussions on subreddits like `r/stocks` t
       )
       ```
 
-## How to Run
-
-### 1. Scrape Reddit Data
-1. Navigate to the `notebooks/` folder and open the `data_scraping.ipynb` file in Jupyter Notebook.
-2. Run all cells to scrape stock-related discussions from `r/stocks` or a chosen subreddit.
-3. Save the scraped data as `raw_data.csv` in the `data/` folder.
-
-### 2. Perform Sentiment Analysis
-1. Open `sentiment_analysis.ipynb` in Jupyter Notebook.
-2. Run all cells to:
-   - Clean and preprocess the data.
-   - Perform sentiment analysis using NLTK's VADER tool.
-   - Save the preprocessed data as `processed_data.csv`.
-
-### 3. Train and Evaluate the Model
-1. Open `model_training.ipynb` in Jupyter Notebook.
-2. Run all cells to:
-   - Load the preprocessed data.
-   - Train a Random Forest Classifier on features like sentiment polarity and word count.
-   - Evaluate the model using metrics such as accuracy, precision, and recall.
-
-### 4. View Results
-- Check the output of the prediction model.
-- Visualizations such as sentiment distributions and model performance metrics are displayed in the notebooks.
-
 ## Results
 - The Random Forest Classifier achieved an accuracy of **85%** on the test dataset.
 - Positive sentiment posts correlated strongly with upward stock price movements.
@@ -92,6 +67,16 @@ The model uses sentiment analysis of discussions on subreddits like `r/stocks` t
   - Recall: 0.84
   - F1 Score: 0.85
 - Sentiment analysis results show a higher frequency of positive discussions in `r/stocks` during market uptrends.
+
+## File Description
+
+- **stock_movement_analysis.py**:
+  This is the main script containing:
+  - Reddit data scraping.
+  - Text preprocessing.
+  - Sentiment analysis using VADER.
+  - Machine learning model (Random Forest Classifier).
+  - Visualizations and evaluation metrics.
 
 ## Challenges and Solutions
 1. **Reddit API Rate Limits:**
